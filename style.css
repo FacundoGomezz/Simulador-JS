@@ -3,6 +3,7 @@ body {
 }
 
 header {
+    border: 1px solid #000000;
     background-color: #923131;
     color: black;
     padding: 1em;
@@ -36,7 +37,7 @@ header {
 }
 
 .producto {
-    border: 1px solid #ddd;
+    border: 1px solid #000000;
     padding: 10px;
     cursor: pointer;
     text-align: center;
@@ -54,7 +55,6 @@ header {
 #carrito {
     margin-top: 20px;
     padding: 20px;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #000000;
     background-color: #a7a174;
 }
-

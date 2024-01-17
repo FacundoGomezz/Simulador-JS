@@ -53,13 +53,10 @@ function agregarAlCarrito(nombreProducto, precioProducto) {
     console.log(`Producto agregado al carrito: ${nombreProducto}`);
 }
 
-
-
-
-
 function actualizarCarrito() {
     var listaCarrito = document.getElementById('listaCarrito');
     var totalCarrito = document.getElementById('totalCarrito');
+    
 
     listaCarrito.innerHTML = "";
     var total = 0;
@@ -73,4 +70,38 @@ function actualizarCarrito() {
     });
 
     totalCarrito.textContent = `Total: $${total.toFixed(2)}`;
+}
+
+function DOM(mensaje) {
+    var mensajeElemento = document.createElement('p');
+    mensajeElemento.textContent = mensaje;
+    document.body.appendChild(mensajeElemento);
+}
+
+function procesarCompra() {
+    if (productosEnCarrito.length === 0) {
+        alert("No hay productos en el carrito. Agregue productos antes de procesar la compra.");
+        return;
+    }
+    DOM("¡Compra procesada con éxito!");
+    console.log("Compra procesada con éxito.");
+    
+}
+
+function almacenarCarritoEnLocalStorage() {
+    localStorage.setItem('carrito', JSON.stringify(productosEnCarrito));
+}
+
+function recuperarCarritoDesdeLocalStorage() {
+    var carritoGuardado = localStorage.getItem('carrito');
+    if (carritoGuardado) {
+        productosEnCarrito = JSON.parse(carritoGuardado);
+        actualizarCarrito();
+    }
+}
+
+function limpiarCarrito() {
+    productosEnCarrito = [];
+    actualizarCarrito();
+    almacenarCarritoEnLocalStorage();
 }
