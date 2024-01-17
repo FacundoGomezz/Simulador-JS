@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #923131;
+    color: black;
+    padding: 1em;
+    text-align: center;
+}
+
+#usuarioInfo {
+    text-decoration: none;
+    color: rgb(4, 78, 128);
+}
+
+#usuarioInfo1 {
+    text-decoration: none;
+    color: rgb(128, 10, 4);
+}
+
+.super {
+    background-image: url("images/supermercado.png");
+    background-size: 100% 80%;
+    background-repeat: no-repeat;
+
+}
+
+#productos {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.producto {
+    border: 1px solid #ddd;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #6f5667;
+    margin: 10px 5px; 
+    flex: 0 1 calc(20% - 10px);
+    box-sizing: border-box;
+    transition: 1s;
+}
+
+.producto:hover {
+    transform: scale(1.2);
+}
+
+#carrito {
+    margin-top: 20px;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    background-color: #a7a174;
+}
+

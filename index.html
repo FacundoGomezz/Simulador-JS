@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Compras de SuperMercado Online</h1>
+        <p>¡Compra todos los productos del super que quieras de manera ONLINE!</p>
+        <div id="usuarioInfo"></div>
+    </header>
+    <main class="super">
+        <section id="productos">
+                <div class="producto" onclick="agregarAlCarrito('Arroz', 1699)">
+                    <h3>Arroz</h3>
+                    <p>Precio: $1699</p>
+                </div>
+                <div class="producto" onclick="agregarAlCarrito('Fideos Lar.', 1060)">
+                    <h3>Fideos Largos</h3>
+                    <p>Precio: $1060</p>
+                </div>
+                <div class="producto" onclick="agregarAlCarrito('Fideos Moñ.', 1299)">
+                    <h3>Fideos Moñito</h3>
+                    <p>Precio: $1299</p>
+                </div>
+                <div class="producto" onclick="agregarAlCarrito('Lentejas', 1610)">
+                    <h3>Lentejas</h3>
+                    <p>Precio: $1610</p>
+                </div>
+                <div class="producto" onclick="agregarAlCarrito('Yerba', 2399)">
+                    <h3>Yerba</h3>
+                    <p>Precio: $2399</p>
+                </div>
+                <div class="producto" onclick="agregarAlCarrito('Polenta', 2100)">
+                    <h3>Polenta</h3>
+                    <p>Precio: $2100</p>
+                </div>
+                <div class="producto" onclick="agregarAlCarrito('Agua 1.5L', 760)">
+                    <h3>Agua 1.5L</h3>
+                    <p>Precio: $760</p>
+                </div>
+                <div class="producto" onclick="agregarAlCarrito('Coca-Cola 2L', 1599)">
+                    <h3>Coca-Cola 2L</h3>
+                    <p>Precio: $1599</p>
+                </div>
+        </section>
+
+        <section id="carrito">
+            <h2>Carrito</h2>
+            <ul id="listaCarrito"></ul>
+            <p id="totalCarrito">Total: $0</p>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
+
